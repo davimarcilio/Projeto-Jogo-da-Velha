@@ -8,3 +8,29 @@
     border: 1px solid black;
     display: inline-block;
 }
+.o{
+   position: relative;
+}
+.o:after{
+    content: "\26AA";
+    position: absolute;
+    font-size: 50px;
+    line-height: 100px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+}
+.x{
+    position: relative;
+ }
+ .x:after{
+     content: "\2716";
+     position: absolute;
+     font-size: 50px;
+     line-height: 100px;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     top: 0;
+ }
