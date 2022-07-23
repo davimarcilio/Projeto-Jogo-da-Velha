@@ -12,7 +12,9 @@ function handleClick(event) {
     let position = square.id;
    if (handleMove(position)) {
     setTimeout(()=>{
-            alert('Game Over o vencedor foi' + playerTime);
+        buttonJoin();
+            let result = document.getElementById('resultado');
+            result.innerHTML = `<span>O jogador ${playerTime} ganhou a partida </span> `
     }, 100);
 
    } ;
@@ -23,10 +25,16 @@ function updateSquare(position) {
     let symbols = board[position];
     square.innerHTML = `<div class="${symbols}"></div>`;
 }
-function resetGame() {
-    if (gameOver == true) {
-        let board = ['', '', '', '', '', '', '', '', ''];
-        let playerTime = 0;
-        let gameOver = false;
-    }
-}
+function updateTable() {
+    let squares = document.querySelectorAll('.square');
+    squares.forEach((square) =>{
+        let position = square.id;
+       let symbols = board[position];
+       if (symbols == '') {
+        square.innerHTML = ``;
+       } else {
+
+       }
+    });
+   } 
+   

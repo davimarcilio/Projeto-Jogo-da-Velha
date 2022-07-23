@@ -10,7 +10,15 @@
 </head>
 
 <body>
+    <div class="chose">
+        <h1>Escolha seu jogador</h1>
+        <input id="x" type="radio" value="1" name="Player-Start" checked>
+        <label for="x" class="xd"></label>
+        <input id="o" type="radio" value="0" name="Player-Start">
+        <label for="o" class="od"></label>
+    </div>
     <div class="container">
+
         <div>
             <div id="0" class="square">
             </div>
@@ -28,14 +36,15 @@
             <div id="7" class="square"></div>
             <div id="8" class="square"></div>
         </div>
+        
     </div>
-    <div>
-        <div id="restart">
-            <button onclick="resetGame()">Recomeçar jogo</button>
+    <div class="rr">
+            <div id="restart">
+                a
+            </div>
+            <div id="resultado">a
+            </div>
         </div>
-        <div id="resultado"></div>
-
-    </div>
     <script src="scripts/game.js"></script>
     <script src="scripts/interface.js"></script>
 </body>

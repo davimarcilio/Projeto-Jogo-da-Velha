@@ -20,7 +20,6 @@ function handleMove(position) {
         board[position] = symbols[playerTime];
         gameOver = isWin();
         if (gameOver == false) {
-
             playerTime = (playerTime == 0) ? 1 : 0;
         }
     }
@@ -41,4 +40,21 @@ function isWin() {
 
     }
     return false;
+}
+function resetGame() {
+    if (gameOver == true) {
+         board = ['', '', '', '', '', '', '', '', ''];
+         playerTime = 0;
+         updateTable();
+         gameOver = false;
+         let btt = document.getElementById('restart');
+            btt.innerHTML = '';
+            let result = document.getElementById('resultado');
+            result.innerHTML = ''
+    }
+    return {board, playerTime, gameOver };
+}
+function buttonJoin() {
+            let btt = document.getElementById('restart');
+            btt.innerHTML = '<button onclick="resetGame()">Recomeçar jogo</button>';
 }
