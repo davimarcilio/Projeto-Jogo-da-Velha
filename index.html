@@ -11,11 +11,13 @@
 
 <body>
     <div class="chose">
-        <h1>Escolha seu jogador</h1>
+        <h1>Escolha o jogador 1</h1>
+        <form oninput="setPlayer()">
         <input id="x" type="radio" value="1" name="Player-Start" checked>
         <label for="x" class="xd"></label>
         <input id="o" type="radio" value="0" name="Player-Start">
         <label for="o" class="od"></label>
+    </form>
     </div>
     <div class="container">
 
@@ -40,9 +42,9 @@
     </div>
     <div class="rr">
             <div id="restart">
-                a
+                
             </div>
-            <div id="resultado">a
+            <div id="resultado">
             </div>
         </div>
     <script src="scripts/game.js"></script>
