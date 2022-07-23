@@ -10,19 +10,23 @@ document.addEventListener('DOMContentLoaded', ()=>{
 function handleClick(event) {
     let square = event.target;
     let position = square.id;
-    handleMove(position);
-    updateSquares();
-}
-function updateSquares() {
-    let squares = document.querySelectorAll('.square');
+   if (handleMove(position)) {
+    setTimeout(()=>{
+            alert('Game Over o vencedor foi' + playerTime);
+    }, 100);
 
-    squares.forEach((square) =>{
-        let position = square.id;
-       let symbols = board[position];
-       if (symbols != '') {
-        square.innerHTML = `<div class="${symbols}"></div>`;
-       } else {
-        
-       }
-    })
+   } ;
+    updateSquare(position);
+}
+function updateSquare(position) {
+    let square = document.getElementById(position.toString());
+    let symbols = board[position];
+    square.innerHTML = `<div class="${symbols}"></div>`;
+}
+function resetGame() {
+    if (gameOver == true) {
+        let board = ['', '', '', '', '', '', '', '', ''];
+        let playerTime = 0;
+        let gameOver = false;
+    }
 }
