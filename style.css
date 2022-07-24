@@ -1,115 +1,133 @@
-body{
-    background-color: beige;
+body {
+   background-color: beige;
 }
-.container{
-    position: relative;
-    text-align: center;
-    display: grid;
-    left: 4%;
+
+.container {
+   position: relative;
+   text-align: center;
+   display: grid;
+   left: 4%;
 }
-.square{
-    width: 100px;
-    height: 100px;
-    background-color: gray;
-    border: 1px solid black;
-    display: inline-block;
+
+.square {
+   width: 100px;
+   height: 100px;
+   background-color: gray;
+   border: 1px solid black;
+   display: inline-block;
 }
-.o{
+
+.o {
    position: relative;
 }
-.o:after{
-    content: "\26AA";
-    position: absolute;
-    font-size: 50px;
-    line-height: 100px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    top: 0;
+
+.o:after {
+   content: "\26AA";
+   position: absolute;
+   font-size: 50px;
+   line-height: 100px;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   top: 0;
 }
-.x{
-    position: relative;
- }
- .x:after{
-     content: "\2716";
-     position: absolute;
-     font-size: 50px;
-     line-height: 100px;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     top: 0;
- }
- #restart{
-    text-align: center;
- }
- button{
-    padding: 10px;
-    background-color: gray;
-    color: white;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 50px;
-    transition: all;
-    transition-duration: 300ms;
-    font-weight: 900;
- }
- button:hover{
-    border-radius: 5px;
-    padding-left: 18px;
-    padding-right: 18px;
- }
- #resultado{
-    text-align: center;
-    font-weight: 900;
-    font-size: 20px;
-    /* background-color: gray; */
-    color: white;
-    margin-top: 50px;
- }
- span{
-    background-color: gray;
-    padding: 50px;
-    border-radius: 30px;
- }
- .chose{
-    float: left;
-    position: relative;
-    text-align: center;
-    margin-left: 2%;
-    background-color: gray;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
-    border-radius: 20px;
-    border: 3px solid black;
- }
- .xd{
-    position: relative;
- }
- .xd:after{
-     content: "\2716";
-     position: absolute;
-     font-size: 40px;
-     top:-85px;
-     left: -90px;
- }
- input[type='radio']{
-    margin-left: 20px;
-    margin-bottom: 50px ;
-    display: block;
- }
- .od{
-    position: relative;
- }
- .od:after{
-     content: "\26AA";
-     position: absolute;
-     font-size: 30px;
-     top:-78px;
-     left: -95px;
- }
- .rr{
-    text-align: center;
- }
+
+.x {
+   position: relative;
+}
+
+.x:after {
+   content: "\2716";
+   position: absolute;
+   font-size: 50px;
+   line-height: 100px;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   top: 0;
+}
+
+#restart {
+   text-align: center;
+}
+
+button {
+   padding: 10px;
+   background-color: gray;
+   color: white;
+   border: 1px solid black;
+   border-radius: 10px;
+   margin: 50px;
+   transition: all;
+   transition-duration: 300ms;
+   font-weight: 900;
+}
+
+button:hover {
+   border-radius: 5px;
+   padding-left: 18px;
+   padding-right: 18px;
+}
+
+#resultado {
+   text-align: center;
+   font-weight: 900;
+   font-size: 20px;
+   /* background-color: gray; */
+   color: white;
+   margin-top: 50px;
+}
+
+span {
+   background-color: gray;
+   padding: 50px;
+   border-radius: 30px;
+}
+
+.chose {
+   float: left;
+   position: relative;
+   text-align: center;
+   margin-left: 2%;
+   background-color: gray;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   padding-left: 50px;
+   padding-right: 50px;
+   border-radius: 20px;
+   border: 3px solid black;
+}
+
+.xd {
+   position: relative;
+}
+
+.xd:after {
+   content: "\2716";
+   position: absolute;
+   font-size: 40px;
+   top: -85px;
+   left: -90px;
+}
+
+input[type='radio'] {
+   margin-left: 20px;
+   margin-bottom: 50px;
+   display: block;
+}
+
+.od {
+   position: relative;
+}
+
+.od:after {
+   content: "\26AA";
+   position: absolute;
+   font-size: 30px;
+   top: -78px;
+   left: -95px;
+}
+
+.rr {
+   text-align: center;
+}

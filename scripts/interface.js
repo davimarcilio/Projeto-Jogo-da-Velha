@@ -1,7 +1,7 @@
 function html() {
     let result = document.getElementById('resultado');
     let btt = document.getElementById('restart');
-    return {btt, result};
+    return { btt, result };
 }
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function handleClick(event) {
     if (handleMove(event.target.id)) {
         setTimeout(() => {
-            if (isWin() == false && DeuVelha == true)  {
+            if (isWin() == false && DeuVelha == true) {
                 html().result.innerHTML = `<span>Deu Velha!</span>`
                 buttonJoin();
             } else {
@@ -37,6 +37,6 @@ function updateTable() {
     squares.forEach((square) => {
         if (board[square.id] == '') {
             square.innerHTML = '';
-        } 
+        }
     });
 }

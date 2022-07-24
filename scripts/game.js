@@ -67,9 +67,9 @@ function setPlayer() {
     return playerTime
 }
 function velha() {
-    if ( board.every((tabuleiro)=>{
+    if (board.every((tabuleiro) => {
         return tabuleiro != '';
-     })) {
+    })) {
         return true;
     } else {
         return false;
