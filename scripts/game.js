@@ -52,10 +52,9 @@ function resetGame() {
         playerTime = setPlayer();
         updateTable();
         gameOver = false;
-        let btt = document.getElementById('restart');
-        btt.innerHTML = '';
-        let result = document.getElementById('resultado');
-        result.innerHTML = ''
+
+        html().btt.innerHTML = '';
+        html().result.innerHTML = ''
     }
     return { board, playerTime, gameOver };
 }
@@ -68,21 +67,39 @@ function setPlayer() {
     return playerTime
 }
 function velha() {
-    if (board[0] != '' && board[1] != '' && board[2] != '' && board[3] != '' && board[4] != '' && board[5] != '' && board[6] != '' && board[7] != '' && board[8] != '') {
+    // for (let i = 0; i < 9; i++){
+    //    if (board[i] != '') {
+    //    return true
+    //    } 
+    // }
+    // return false;
+    if ( board.every((tabuleiro)=>{
+        return tabuleiro != '';
+     })) {
         return true;
+    } else {
+        return false;
     }
-    return false;
-}
-function verifyvelhawin() {
-    for (let i = 0; i < winStates.length; i++) {
-        const seq = winStates[i];
+    // board.every((tabuleiro)=>{
+    //    return tabuleiro != '';
+    // })
 
-        let pos1 = seq[0];
-        let pos2 = seq[1];
-        let pos3 = seq[2];
-        if ((board[pos1] == board[pos2]) && (board[pos1] == board[pos3]) && (board[pos1] != '')) {
-            return true;
-        }
-    }
-    return false;
+// board[0], [1], [2], [3], [4], [5], [6], [7], [8] == ''
+// if (board[0] != '' && board[1] != '' && board[2] != '' && board[3] != '' && board[4] != '' && board[5] != '' && board[6] != '' && board[7] != '' && board[8] != '') {
+//     return true;
+// }
+// return false;
 }
+// function verifyvelhawin() {
+//     for (let i = 0; i < winStates.length; i++) {
+//         const seq = winStates[i];
+
+//         let pos1 = seq[0];
+//         let pos2 = seq[1];
+//         let pos3 = seq[2];
+//         if ((board[pos1] == board[pos2]) && (board[pos1] == board[pos3]) && (board[pos1] != '')) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
