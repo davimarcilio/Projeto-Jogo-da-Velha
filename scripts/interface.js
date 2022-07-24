@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
     let squares = document.querySelectorAll('.square');
@@ -12,15 +13,18 @@ function handleClick(event) {
     if (handleMove(event.target.id)) {
         let result = document.getElementById('resultado');
         setTimeout(() => {
-            if (DeuVelha == true) {
+            if (verifyvelhawin() == false && DeuVelha == true)  {
                 result.innerHTML = `<span>Deu Velha!</span>`
-            } 
-            if (jogador == 0) {
-                result.innerHTML = `<span>O jogador ${playerTime + 1} ganhou a partida </span>`
+                buttonJoin();
             } else {
-                result.innerHTML = `<span>O jogador ${playerTime + 1} ganhou a partida </span>`
+                if (jogador == 0) {
+                    result.innerHTML = `<span>O jogador ${playerTime + 1} ganhou a partida </span>`;
+                } else {
+                    result.innerHTML = `<span>O jogador ${playerTime} ganhou a partida </span>`;
+                }
+                    
+                buttonJoin();
             }
-            buttonJoin();
         }, 100);
 
     };
