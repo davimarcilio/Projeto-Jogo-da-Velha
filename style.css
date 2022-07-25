@@ -1,12 +1,14 @@
 body {
    background-color: beige;
+   margin: 0;
+   padding: 0;
 }
 
 .container {
+   margin-top: 2vw;
    position: relative;
    text-align: center;
    display: grid;
-   left: 4%;
 }
 
 .square {
@@ -57,7 +59,7 @@ button {
    color: white;
    border: 1px solid black;
    border-radius: 10px;
-   margin: 50px;
+   margin: 2vw;
    transition: all;
    transition-duration: 300ms;
    font-weight: 900;
@@ -73,7 +75,6 @@ button:hover {
    text-align: center;
    font-weight: 900;
    font-size: 20px;
-   /* background-color: gray; */
    color: white;
    margin-top: 50px;
 }
@@ -88,14 +89,14 @@ span {
    float: left;
    position: relative;
    text-align: center;
-   margin-left: 2%;
    background-color: gray;
-   padding-top: 30px;
-   padding-bottom: 30px;
+   padding-top: 20px;
+   padding-bottom: 20px;
    padding-left: 50px;
    padding-right: 50px;
    border-radius: 20px;
    border: 3px solid black;
+   max-width: 300px;
 }
 
 .xd {
@@ -130,4 +131,21 @@ input[type='radio'] {
 
 .rr {
    text-align: center;
+}
+.page{
+   display: grid;
+   justify-content: center;
+   margin-top: 1.5vw;
+}
+.top{
+   display: flex;
+   background-color: rgb(0, 8, 51);
+   width: 100%;
+   height: 80px;
+   color: white;
+   justify-content: center;
+   align-items: center;
+}
+#topage{
+   margin: 0;
 }

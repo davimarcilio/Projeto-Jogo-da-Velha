@@ -9,16 +9,21 @@
     <title>Jogo da Velha</title>
 </head>
 
-<body>
-    <div class="chose">
-        <h1>Escolha o jogador 1</h1>
-        <form oninput="setPlayer()">
-            <input id="x" type="radio" value="1" name="Player-Start" checked>
-            <label for="x" class="xd"></label>
-            <input id="o" type="radio" value="0" name="Player-Start">
-            <label for="o" class="od"></label>
-        </form>
+<body>  
+    <div class="top">
+        <h1 id="topage">Jogo Da Velha</h1>
     </div>
+    <div class="page">
+      
+        <div class="chose">
+            <h1>Escolha o jogador 1</h1>
+            <form oninput="setPlayer()">
+                <input id="x" type="radio" value="1" name="Player-Start" checked>
+                <label for="x" class="xd"></label>
+                <input id="o" type="radio" value="0" name="Player-Start">
+                <label for="o" class="od"></label>
+            </form>
+        </div>
         <div class="container">
             <div>
                 <div id="0" class="square">
@@ -37,6 +42,7 @@
                 <div id="7" class="square"></div>
                 <div id="8" class="square"></div>
             </div>
+        </div>
     </div>
     <div class="rr">
         <div id="restart">
