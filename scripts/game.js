@@ -52,26 +52,20 @@ function resetGame() {
         playerTime = setPlayer();
         updateTable();
         gameOver = false;
-
         html().btt.innerHTML = '';
         html().result.innerHTML = ''
     }
     return { board, playerTime, gameOver };
 }
 function buttonJoin() {
-    let btt = document.getElementById('restart');
-    btt.innerHTML = '<button onclick="resetGame()">Recomeçar jogo</button>';
+   html().btt.innerHTML = '<button onclick="resetGame()">Recomeçar jogo</button>';
 }
 function setPlayer() {
     playerTime = parseInt(document.querySelector('input[name=Player-Start]:checked').value);
     return playerTime
 }
 function velha() {
-    if (board.every((tabuleiro) => {
+    return board.every((tabuleiro) => {
         return tabuleiro != '';
-    })) {
-        return true;
-    } else {
-        return false;
-    }
+    })
 }

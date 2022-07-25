@@ -11,17 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 function handleClick(event) {
     if (handleMove(event.target.id)) {
-        setTimeout(() => {
             if (isWin() == false && DeuVelha == true) {
-                html().result.innerHTML = `<span>Deu Velha!</span>`
-                buttonJoin();
+                html().result.innerHTML = `<span>Deu Velha!</span>`;
             } else {
                 html().result.innerHTML = `<span>O jogador ${playerTime} ganhou a partida </span>`;
-                buttonJoin();
             }
-        }, 100);
-
-    };
+            buttonJoin();
+        }
     updateSquare(event.target.id);
 }
 function updateSquare(position) {
