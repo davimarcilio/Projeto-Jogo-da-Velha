@@ -1,16 +1,13 @@
 function html() {
     let result = document.getElementById('resultado');
     let btt = document.getElementById('restart');
-    return { btt, result };
+    let squares = document.querySelectorAll('.square');
+    return { btt, result, squares };
 }
 document.addEventListener('DOMContentLoaded', () => {
-
-    let squares = document.querySelectorAll('.square');
-
-    squares.forEach((square) => {
+    html().squares.forEach((square) => {
         square.addEventListener('click', handleClick);
     })
-
 })
 function handleClick(event) {
     if (handleMove(event.target.id)) {
@@ -33,8 +30,7 @@ function updateSquare(position) {
     square.innerHTML = `<div class="${symbols}"></div>`;
 }
 function updateTable() {
-    let squares = document.querySelectorAll('.square');
-    squares.forEach((square) => {
+    html().squares.forEach((square) => {
         if (board[square.id] == '') {
             square.innerHTML = '';
         }
