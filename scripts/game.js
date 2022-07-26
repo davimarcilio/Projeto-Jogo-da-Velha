@@ -52,13 +52,10 @@ function resetGame() {
         playerTime = setPlayer();
         updateTable();
         gameOver = false;
-        html().btt.innerHTML = '';
         html().result.innerHTML = ''
+        html().result.style.display = 'none';
     }
     return { board, playerTime, gameOver };
-}
-function buttonJoin() {
-   html().btt.innerHTML = '<button onclick="resetGame()">Recomeçar jogo</button>';
 }
 function setPlayer() {
     playerTime = parseInt(document.querySelector('input[name=Player-Start]:checked').value);

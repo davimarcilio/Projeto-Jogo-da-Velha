@@ -12,9 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function handleClick(event) {
     if (handleMove(event.target.id)) {
             if (isWin() == false && DeuVelha == true) {
-                html().result.innerHTML = `<span>Deu Velha!</span>`;
+                html().result.style.display='flex';
+                html().result.innerHTML = `<h1>Deu Velha!</h1>`;
             } else {
-                html().result.innerHTML = `<span>O jogador ${playerTime} ganhou a partida </span>`;
+                html().result.style.display='flex';
+                html().result.innerHTML += `<h1>O jogador ${playerTime} ganhou a partida </h1>`;
             }
             buttonJoin();
         }
@@ -32,3 +34,6 @@ function updateTable() {
         }
     });
 }
+function buttonJoin() {
+    html().result.innerHTML += '<button onclick="resetGame()">Recomeçar jogo</button>';
+ }
