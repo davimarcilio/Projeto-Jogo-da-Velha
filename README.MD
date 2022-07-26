@@ -13,7 +13,7 @@
 <br>
 <div align="center">
 
-![jogo da velha2](https://user-images.githubusercontent.com/104699555/180692609-fcd41d7c-7e4b-4c64-82ff-4af0faf6cbb0.gif)
+![jogo da velha2 0](https://user-images.githubusercontent.com/104699555/181029308-d4a9eabe-1f10-4e0b-947d-d1bcee9cdd2b.gif)
 
 <br> <br>
 </div>
